@@ -131,22 +131,22 @@ footer button:hover {
 
 @media (max-width : 900px) {
     header h1 {
-        font-size: 20px;
+        font-size: 30px;
         margin-left: 40px;
     }
 
     header button {
         font-size: 12px;
-        width: 80px;
+        width: 100px;
     }
 
     .result-display {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .score-display {
         font-size: 15px;
-        margin-bottom: 150px;
+        margin-bottom: 300px;
     }
 
     .game-buttons button {
@@ -158,7 +158,7 @@ footer button:hover {
     }
 
     footer {
-        height: 30px;
+        height: 60px;
     }
 
     footer button {
