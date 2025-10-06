@@ -1,4 +1,14 @@
 
+function toggleTheme() {
+    if (document.querySelector(".theme-button").innerText === "DARK") {
+        document.body.classList.add("dark-theme");
+        document.querySelector(".theme-button").innerText = "LIGHT";
+    } else {
+        document.body.classList.remove("dark-theme");
+        document.querySelector(".theme-button").innerText = "DARK";
+    }
+}
+
 const resultDisplay = document.querySelector(".result-display")
 const scoreDisplay = document.querySelector(".score-display")
 
@@ -6,6 +16,8 @@ const gameScore = JSON.parse(localStorage.getItem("Game score")) || {
     player : 0,
     computer : 0
 }
+
+scoreDisplay.innerText = `You : ${gameScore.player} | Computer : ${gameScore.computer}`;
 
 function playGame(playerChoice) {
     let computerChoice = Math.floor(Math.random() * 3);
@@ -56,14 +68,4 @@ function resetScore() {
     localStorage.removeItem("Game score");
     resultDisplay.innerText = "Score has been reset!";
     scoreDisplay.innerText = `You : ${gameScore.player} | Computer : ${gameScore.computer}`;
-}
-
-function toggleTheme() {
-    if (document.querySelector(".theme-button").innerText === "Dark theme") {
-        document.body.classList.add("dark-theme");
-        document.querySelector(".theme-button").innerText = "Light theme";
-    } else {
-        document.body.classList.remove("dark-theme");
-        document.querySelector(".theme-button").innerText = "Dark theme";
-    }
 }
